@@ -39,7 +39,7 @@ const WalletCard = () => {
                 const nftContract = new ethers.Contract('0x21830A761B3ECF98641A479534753D34C9d49ba9', ABI, signer);
                 console.log('initialize payment')
 
-                let nftTxn = await nftContract.mint(1, {value:ethers.utils.parseEther("0.00"), gasLimit:3000000})
+                let nftTxn = await nftContract.mint(1, {value:ethers.utils.parseEther("0.01"), gasLimit:3000000})
 
                 console.log('minting...')
                 await nftTxn.wait()
