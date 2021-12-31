@@ -36,7 +36,7 @@ const WalletCard = () => {
             if(ethereum){
                 const provider = new ethers.providers.Web3Provider(ethereum)
                 const signer = provider.getSigner()
-                const nftContract = new ethers.Contract('0x98B6585Cc06f1403585a90a07B9260ed750FA56b', ABI, signer);
+                const nftContract = new ethers.Contract('0x21830A761B3ECF98641A479534753D34C9d49ba9', ABI, signer);
                 console.log('initialize payment')
 
                 let nftTxn = await nftContract.mint(1, {value:ethers.utils.parseEther("0.00")})
