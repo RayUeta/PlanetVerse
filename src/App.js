@@ -4,7 +4,7 @@ import WalletCard from './WalletCard';
 
 function App() {
   return (
-    <div>
+    <div className='walletcard'>
       <WalletCard/>
     </div>
 
