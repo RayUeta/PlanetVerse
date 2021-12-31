@@ -56,7 +56,7 @@ const WalletCard = () => {
 
     return (
         <div>
-            <h4>Connect to MetaMask</h4>
+            <h4>Connect to MetaMask Test2</h4>
             <button onClick={connectWalletHandler}>{connectButtonText}</button>
             <div>
                 <h3>Connected To: {defaultAccount}</h3>
