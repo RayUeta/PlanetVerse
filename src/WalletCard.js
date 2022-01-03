@@ -3,6 +3,7 @@ import ABI from './data/ABI.json'
 import { ethers } from 'ethers'
 import './WalletCard.css'
 import detectEthereumProvider from '@metamask/detect-provider';
+import mysteryLogo from "./images/WechatIMG210.png"
 const WalletCard = () => {
   const deployNetwork = 'EthereumTestRinkeby'
 
@@ -50,7 +51,7 @@ const WalletCard = () => {
     }
   }
   const nicePrintWallet = (walletString) => {
-    return `${walletString.substring(0,6)}....${walletString.substring(walletString.length - 7)}`
+    return `${walletString.substring(0, 6)}....${walletString.substring(walletString.length - 7)}`
   }
 
   const connectWalletHandler = () => {
@@ -109,49 +110,37 @@ const WalletCard = () => {
 
 
   return (
-    <body>
+
+    <body className="body">
       <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" className="navigation w-nav">
         <div className="navigation-wrap">
-          <a href="index.html" aria-current="page" className="logo-link w-nav-brand w--current"><img src="images/business-logo2x.png" width="108" alt="" className="logo-image" /></a>
+          <a href="index.html" aria-current="page" className="logo-link w-nav-brand w--current"><img src="images/business-logo2x.png" width="108" alt="" className="logo-image"/></a>
         </div>
         <div>
           <button className="button cc-contact-us" onClick={connectWalletHandler}><span className="buttontext">{defaultAccount}</span></button>
         </div>
       </div>
       <div className="intro-header">
-        <div className="button cc-white-button" onClick={mintButtonHandler}>MINT</div>
+        <div className="div-block-3"><img src={mysteryLogo} className="image-2"/>
+          <div className="button cc-white-button" onClick={mintButtonHandler}>MINT</div>
+        </div>
       </div>
       <div className="div-block-2">
-        <h1>Heading</h1><img src="images/placeholder-2.svg" loading="lazy" width="700" alt="" className="image" />
+        <h2>What is the PlanetVerse?</h2>
+        <p className="paragraph">PlanetVerse is a Defi + NFT project deployed on ETH with the main focus on NFT and Metaverse “BSaS” incubation that allow the outcome of NFT development standards, diverse user experience, and application values into a series of standard smart contracts. As a new-leader in the NFT SECTOR, PlanetVerse is able to provide NFT developer teams, artists and art show a platform to create easy and quick combinations of NFT products</p>
+      </div>
+      <div className="div-block-2">
+        <h2>What is the PlanetVerse?</h2>
+        <p className="paragraph">PlanetVerse is a Defi + NFT project deployed on ETH with the main focus on NFT and Metaverse “BSaS” incubation that allow the outcome of NFT development standards, diverse user experience, and application values into a series of standard smart contracts. As a new-leader in the NFT SECTOR, PlanetVerse is able to provide NFT developer teams, artists and art show a platform to create easy and quick combinations of NFT products</p>
+      </div>
+      <div className="div-block-2">
+        <h2>What is the PlanetVerse?</h2>
+        <p className="paragraph">PlanetVerse is a Defi + NFT project deployed on ETH with the main focus on NFT and Metaverse “BSaS” incubation that allow the outcome of NFT development standards, diverse user experience, and application values into a series of standard smart contracts. As a new-leader in the NFT SECTOR, PlanetVerse is able to provide NFT developer teams, artists and art show a platform to create easy and quick combinations of NFT products</p>
       </div>
       <div className="section">
         <div className="container"></div>
       </div>
-      <div className="section cc-cta">
-        <div className="container">
-          <div className="cta-wrap">
-            <div>
-              <div className="cta-text">
-                <div className="heading-jumbo-small">Grow your business.<br /></div>
-                <div className="paragraph-bigger cc-bigger-light">Today is the day to build the business of your dreams. Share your mission with the world — and blow your customers away.<br /></div>
-              </div>
-              <a className="button cc-jumbo-button w-inline-block">
-                <div>Start Now</div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="section">
-        <div className="container">
-          <div className="footer-wrap">
-            <a href="https://webflow.com/" target="_blank" className="webflow-link w-inline-block"><img src="images/webflow-w-small2x_1webflow-w-small2x.png" width="15" alt="" className="webflow-logo-tiny" />
-              <div className="paragraph-tiny">Powered by Webflow</div>
-            </a>
-          </div>
-        </div>
-      </div>
-
+    
     </body>
   )
 }
