@@ -34,6 +34,8 @@ const WalletCard = () => {
         alert('account changed')
       })
     }
+
+    document.title = "PlanetVerse"
   })
 
   const networks = {
@@ -123,6 +125,7 @@ const WalletCard = () => {
 
 
   return (
+    
 
     <body className="body">
       <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" className="navigation w-nav">
